@@ -5,13 +5,25 @@ const record = [
     { year: "2013", result: "L"},
     //...
   ]
-  //console.log(record[0].year)
-function superbowlWin(record){
+ 
+
+function superbowlWin(array){
+  const yearWin = array.find((record) => record.result === 'W');
+  if(yearWin){
+      return yearWin.year;
+  }
+  return undefined;
+}
+superbowlWin(record);
+
+// alternative function definition and call::
+/*function superbowlWin(record){
   const winRecord = record.find(record => record.result === 'W');
   return winRecord ? winRecord.year : undefined;
 }
 
-record.find(superbowlWin);
+record.find(superbowlWin);*/
+
 
 
 
